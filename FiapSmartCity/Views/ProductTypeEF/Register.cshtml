@@ -1,0 +1,54 @@
+﻿@model FiapSmartCity.Models.ProductTypeEF;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tipo de Produto - Cadastrar</title>
+</head>
+<body>
+    <h1>Tipo de Produto - Cadastrar</h1>
+
+    <!-- formulário HTML com Tag Helpers-->
+    <form asp-action="Register" asp-controller="ProductTypeEF" method="post">
+        <div class="form-horizontal">
+            <hr />
+
+            <div class="form-group">
+                <label>Descrição</label>
+                <div class="col-md-10">
+                    <!-- Caixa de Texto -->
+                    <input asp-for="TypeDescription" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Comercializado</label>
+                <div class="checkbox">
+                    <!-- CheckBox -->
+                    <input asp-for="Marketed" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="reset" value="Limpar" class="btn btn-default" />
+                    <!-- HTML Simple para envio dos dados do formulário -->
+                    <input type="submit" value="Cadastrar" class="btn btn-default" />
+                </div>
+            </div>
+            <hr />
+        </div>
+    </form>
+
+    <div>
+        <a asp-controller="ProductTypeEF" asp-action="Index">Voltar</a>
+    </div>
+
+</body>
+</html>

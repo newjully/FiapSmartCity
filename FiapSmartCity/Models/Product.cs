@@ -3,9 +3,9 @@
  public class Product
         {
             public int ProductId { get; set; }
-            public string ProductName { get; set; }
+            public string NomeProduto { get; set; }
             public string Features { get; set; } // Características
-            public double AveragePrice { get; set; } // preço médio
+            public double PrecoMedio { get; set; } // preço médio
             public string Logotipo { get; set; }
             public bool Active { get; set; } // ativos
 
